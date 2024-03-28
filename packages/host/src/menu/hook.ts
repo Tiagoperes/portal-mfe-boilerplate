@@ -1,30 +1,27 @@
- 
-
-import { MenuProps, MenuSectionContent } from '@stack-spot/portal-layout'
+import { MenuProps } from '@stack-spot/portal-layout'
 import { useNavigationContext } from 'navigation'
 import { useState } from 'react'
+import { useMenuModules } from './MenuModuleProvider'
 import { useMenuSections } from './sections'
 
-interface CurrentContent {
-  // attention: this key must be unique for each possible menu, otherwise there will be React Hook errors.
-  key: string,
-  content: () => MenuSectionContent,
-}
+type MenuType = 'account' | 'studios' | undefined
 
 export function useMenu(): MenuProps {
+  const modules = useMenuModules()
   const sections = useMenuSections()
-  const [current, setCurrent] = useState<CurrentContent | undefined>()
+  const contents = {
+    account: modules.accountContent,
+    studios: modules.useStudiosContent(),
+  }
+  const [current, setCurrent] = useState<MenuType>()
 
   useNavigationContext(context => {
     context
-      .whenSubrouteOf('root.account', async () => {
-        const { default: useAccountMenu } = await import('account/menu')
-        setCurrent({ key: 'account', content: useAccountMenu })
-      })
+      .whenSubrouteOf('root.account', () => setCurrent('account'))
+      .whenSubrouteOf('root.studios', () => setCurrent('studios'))
       .otherwise(() => setCurrent(undefined))
   })
 
-  return current
-    ? { sections, content: current.content, contentKey: current.key }
-    : { sections }
+  const currentContent = current ? contents[current] : undefined
+  return currentContent ? { sections, ...currentContent } : { sections }
 }

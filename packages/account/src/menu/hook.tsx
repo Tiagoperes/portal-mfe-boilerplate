@@ -1,12 +1,13 @@
-import { Account } from '@citric/icons'
 import { MenuProps } from '@stack-spot/portal-layout'
-import { useAccountMenu } from './account'
+// import { useLanguage } from '@stack-spot/portal-translate'
+import { menuContent } from './content'
+import { useMenuSections } from './sections'
+// import { createMenuSections } from './sections'
 
 export function useMenu(): MenuProps {
-  const content = useAccountMenu()
+  const sections = useMenuSections()
   return {
-    sections: [{ icon: <Account />, label: 'Account', active: true, content }],
-    content: useAccountMenu,
-    contentKey: 'account',
+    sections,
+    ...menuContent,
   }
 }

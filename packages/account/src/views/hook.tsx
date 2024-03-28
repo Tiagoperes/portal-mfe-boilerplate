@@ -2,7 +2,7 @@ import { useNavigationContext } from 'navigation'
 import { ReactElement, useState } from 'react'
 
 export function useContent() {
-  const [content, setContent] = useState<ReactElement | null>(null)
+  const [content, setContent] = useState<ReactElement>()
 
   useNavigationContext(context => {
     context

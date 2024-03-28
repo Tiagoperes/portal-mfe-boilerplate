@@ -27,8 +27,8 @@ dependencies:
     specifier: ^0.0.6
     version: 0.0.6(@citric/core@5.7.0)(@citric/icons@5.7.0)(@citric/ui@5.7.0)(@stack-spot/portal-theme@0.0.7)(@stack-spot/portal-translate@0.0.6)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8)
   '@stack-spot/portal-layout':
-    specifier: ^0.0.20
-    version: 0.0.20(@citric/core@5.7.0)(@citric/icons@5.7.0)(@citric/ui@5.7.0)(@stack-spot/portal-theme@0.0.7)(@stack-spot/portal-translate@0.0.6)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8)
+    specifier: ^0.0.21
+    version: 0.0.21(@citric/core@5.7.0)(@citric/icons@5.7.0)(@citric/ui@5.7.0)(@stack-spot/portal-theme@0.0.7)(@stack-spot/portal-translate@0.0.6)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8)
   '@stack-spot/portal-theme':
     specifier: ^0.0.7
     version: 0.0.7(@citric/core@5.7.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8)
@@ -1009,8 +1009,8 @@ packages:
       styled-components: 6.1.8(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@stack-spot/portal-layout@0.0.20(@citric/core@5.7.0)(@citric/icons@5.7.0)(@citric/ui@5.7.0)(@stack-spot/portal-theme@0.0.7)(@stack-spot/portal-translate@0.0.6)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8):
-    resolution: {integrity: sha512-7nZHs112fOSXrUBPnKIx0+jP3PFoV4rn7WdQGJ5aWOpHkIoR4TQjLJwYIddSBdim9QH2p6spiVJIA8DRgjEMEg==}
+  /@stack-spot/portal-layout@0.0.21(@citric/core@5.7.0)(@citric/icons@5.7.0)(@citric/ui@5.7.0)(@stack-spot/portal-theme@0.0.7)(@stack-spot/portal-translate@0.0.6)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8):
+    resolution: {integrity: sha512-yjrA4SaY6pJYw2VVLMGH4JxVPcnHwNlTeYv7o6d2H+BoPIbck5UIVDT3c8bZGy1QZYxZ7qygAGdI1TJ5R8phfw==}
     peerDependencies:
       '@citric/core': '>=5.4.0'
       '@citric/icons': '>=5.4.0'

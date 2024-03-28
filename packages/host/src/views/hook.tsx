@@ -6,15 +6,17 @@ export function useContent() {
 
   useNavigationContext(context => {
     context
-      // Home
       .when('root', async props => {
         const { Home } = await import('./Home')
         setContent(<Home {...props} />)
       })
-      // Account
-      .whenSubrouteOf('root.account', async props => {
-        const AccountView = (await import('account/View')).default
-        setContent(<AccountView {...props} />)
+      .whenSubrouteOf('root.account', async () => {
+        const { MFEView } = (await import('account/View')).default
+        setContent(<MFEView />)
+      })
+      .whenSubrouteOf('root.studios', async () => {
+        const { MFEView } = (await import('studios/View')).default
+        setContent(<MFEView />)
       })
   })
 

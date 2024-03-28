@@ -11,6 +11,7 @@ export default defineConfig({
       name: 'api-management-host',
       remotes: {
         account: "http://localhost:3001/assets/account.js",
+        studios: "http://localhost:3002/assets/studios.js",
       },
       shared: [
         'react', 'react-dom', 'styled-components', '@stack-spot/auth', '@stack-spot/auth-react', '@stack-spot/citron-navigator', 

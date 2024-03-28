@@ -4,3 +4,5 @@
   + account (/account/*):
   # STUDIOS
   + studios (/studios/*):
+    like: string
+    limit: number

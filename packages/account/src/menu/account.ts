@@ -110,7 +110,3 @@ export function useAccountMenu(): MenuSectionContent {
     ],
   }
 }
-
-// Default export is required by Module Federation
-// eslint-disable-next-line import/no-default-export
-export default useAccountMenu

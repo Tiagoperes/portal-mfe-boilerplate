@@ -1,7 +1,6 @@
 import { CitronNavigator, Route } from '@stack-spot/citron-navigator'
 import { useQueryClient } from '@tanstack/react-query'
 import { useRouteData } from 'navigation'
-import { fetchStudio } from 'network/mocks'
 import { sessionManager } from 'network/session-manager'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { ReplaceMap } from './types'
@@ -30,41 +29,30 @@ export function useDynamicReplacements() {
   })
 
   const update = useCallback(
-    async (updatedRoute: Route, updatedParams: Record<string, any>) => {
+    async (updatedRoute: Route/*, updatedParams: Record<string, any>*/) => {
       const result: ReplaceMap = { ...initial }
-      const promises: (() => Promise<any>)[] = []
-      const routeKey = updatedRoute.$key.split('.')
+      // const promises: (() => Promise<any>)[] = []
+      // const routeKey = updatedRoute.$key.split('.')
 
       // replaces the route key "studio" with the studio's name
-      if (routeKey.includes('studio') && updatedParams.studioId) {
-        promises.push(async () => {
-          const studio = await queryClient.fetchQuery({
-            queryKey: ['studio', updatedParams.studioId],
-            queryFn: () => fetchStudio(updatedParams.studioId),
-          })
-          result.studio = studio?.name
-        })
-      }
+      // if (routeKey.includes('studio') && updatedParams.studioId) {
+      //   promises.push(async () => {
+      //     const studio = await queryClient.fetchQuery({
+      //       queryKey: ['studio', updatedParams.studioId],
+      //       queryFn: () => fetchStudio(updatedParams.studioId),
+      //     })
+      //     result.studio = studio?.name
+      //   })
+      // }
 
-      // replaces the route key "stack" with the stack's name
-      if (routeKey.includes('stack') && updatedParams.stackId) {
-        promises.push(async () => {
-          const stack = await queryClient.fetchQuery({
-            queryKey: ['stack', updatedParams.studioId],
-            queryFn: () => fetchStudio(updatedParams.studioId),
-          })
-          result.stack = stack?.name
-        })
-      }
-
-      await Promise.allSettled(promises.map(p => p()))
+      // await Promise.allSettled(promises.map(p => p()))
       setData({ replacements: result, route: updatedRoute, isLoading: false })
     },
     [initial, queryClient],
   )
 
   useEffect(() => {
-    update(route as Route, params as Record<string, any>)
+    update(route as Route/*, params as Record<string, any>*/)
   }, [route, params, update])
 
   return data

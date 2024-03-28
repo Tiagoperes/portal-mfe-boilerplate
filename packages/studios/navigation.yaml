@@ -1,0 +1,9 @@
++ root ~ root.studios (/studios):
+  like: string
+  limit: number
+  + studio (/{studioId}):
+    + stacks (/stacks):
+      tech: array (string[])
+      + stack (/{stackId}):
+        + starters (/starters):
+          + starter (/{starterId}):

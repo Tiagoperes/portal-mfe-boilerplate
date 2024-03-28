@@ -14,7 +14,8 @@ export default defineConfig({
       // Modules to expose
       exposes: {
         './View': './src/views/MFEView.tsx',
-        './menu': './src/menu/account.ts',
+        './menu-sections': './src/menu/sections.tsx',
+        './menu-content': './src/menu/content.ts',
       },
       shared: [
         'react', 'react-dom', 'styled-components', '@stack-spot/auth', '@stack-spot/auth-react', '@stack-spot/citron-navigator',

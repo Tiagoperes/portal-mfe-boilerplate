@@ -1,0 +1,12 @@
+name: Build and deploy to DEV
+
+on: workflow_dispatch
+
+jobs:
+  build-and-deploy:
+    uses: ./.github/workflows/deploy-s3.yaml
+    with:
+      bucket: api-management-catalog.dev.stackspot.com
+      distribution: E2MZT9Q4BDLKK4
+      target: development
+      runner: engineering-runners-dev
