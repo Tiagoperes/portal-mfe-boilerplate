@@ -1,0 +1,7 @@
++ root ~ root.account (/account):
+  + environments (/environments):
+    search: string
+  + organization (/organization):
+  + workspaces (/workspaces):
+    search: string
+    type: string ('ALL' | 'OWNED')

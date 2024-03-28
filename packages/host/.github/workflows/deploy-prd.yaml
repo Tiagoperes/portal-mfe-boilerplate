@@ -1,0 +1,12 @@
+name: Build and deploy to PRD
+
+on: workflow_dispatch
+
+jobs:
+  build-and-deploy:
+    uses: ./.github/workflows/deploy-s3.yaml
+    with:
+      bucket: api-management-catalog.prd.stackspot.com
+      distribution: E36KGNO3OUTUL
+      target: production
+      runner: engineering-runners-prd

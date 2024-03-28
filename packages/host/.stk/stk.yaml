@@ -1,0 +1,41 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: catalog
+  description: exposição das apis do api-management
+  starter: idp/core@2.1.9/eks-app
+  stack-version-id: 01HNEFXSD96YQTJ3FRD49K84V6
+  stack: core@2.1.9
+spec:
+  type: app
+  app-id: 01HPQCJ90VW26VK04H490YJ2H2
+  plugins:
+    - name: idp/core@2.1.9/cloudfront-s3@1.0.0
+      alias: cloudfront-s3-1708033923217
+      plugin-version-id: 01HKMRZJ0QTDV14F76VT079581
+      stack-version-id: 01HNEFXSD96YQTJ3FRD49K84V6
+      type: infra
+      inputs:
+        site_name: api-management-catalog
+        use_redirect: true
+        additional_oia_expose: false
+      inputs-envs: {}
+      connections:
+        generates:
+          - type: aws-cloudfront-conn
+            selected: api-management-catalog-cloudfront-conn
+            alias: aws-cloudfront-conn
+          - type: aws-s3-conn
+            selected: api-management-catalog-s3-conn
+            alias: aws-s3-conn
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs:
+    region: sa-east-1
+    app_name: catalog
+    workspace: ApiManagement
+    formatted_workspace: api-management
+    account_slug: stackspot
+  repository: https://github.com/stack-spot/api-management-catalog.git

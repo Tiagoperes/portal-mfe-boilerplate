@@ -1,0 +1,12 @@
+name: Build and deploy to STG
+
+on: workflow_dispatch
+
+jobs:
+  build-and-deploy:
+    uses: ./.github/workflows/deploy-s3.yaml
+    with:
+      bucket: api-management-catalog.stg.stackspot.com
+      distribution: E3NQPNSC9V9TRJ
+      target: staging
+      runner: engineering-runners-stg

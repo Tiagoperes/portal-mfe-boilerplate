@@ -1,0 +1,6 @@
+# HOME
++ root (/):
+  # ACCOUNT
+  + account (/account/*):
+  # STUDIOS
+  + studios (/studios/*):
