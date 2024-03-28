@@ -18,7 +18,7 @@ pnpm i
 ## Running the modules in a stand-alone environment
 Every module is independent from each other and it's much easier to develop and debug a module by running it without Module Federation.
 
-To start up the standalone module, inside the module's directory, run:
+To start up the standalone module: inside the module's directory, run:
 
 ```sh
 pnpm start
@@ -52,9 +52,9 @@ pnpm start
 When building in preview mode, the variables at `.env.preview` will be used.
 
 The commands above will:
-- start a modularized version of the project "account" in "http://localhost:3001";
-- start a modularized version of the project "studios" in "http://localhost:3002";
-- start the host application at "http://localhost:3000".
+1. start a modularized version of the project "account" at "http://localhost:3001";
+2. start a modularized version of the project "studios" at "http://localhost:3002";
+3. start the host application at "http://localhost:3000".
 
 ## How does it work
 - The host application acts as a shell, loading all the modules when needed.
