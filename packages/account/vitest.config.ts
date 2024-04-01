@@ -5,6 +5,11 @@ export default mergeConfig(config, {
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/jest.setup.ts'],
+    setupFiles: ['./test/jest.setup.ts'],
+    server: {
+      deps: {
+        inline: [/@stack-spot\/portal-layout.*/],
+      },
+    }
   },
 })

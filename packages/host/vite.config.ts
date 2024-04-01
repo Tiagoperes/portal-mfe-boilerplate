@@ -28,6 +28,7 @@ export default defineConfig({
       hooks: resolve(__dirname, './src/hooks'),
       navigation: resolve(__dirname, './src/generated/navigation'),
       env: resolve(__dirname, './src/env'),
+      src: resolve(__dirname, './src'),
     },
   },
   build: {

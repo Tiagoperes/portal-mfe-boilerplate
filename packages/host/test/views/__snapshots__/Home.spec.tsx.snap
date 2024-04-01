@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests of Home page > Should match the snapshot 1`] = `
+<div>
+  <p>
+    Home
+  </p>
+  <p>
+    <a
+      href="/#/studios"
+    >
+      Go to Studios
+    </a>
+  </p>
+  <p>
+    <a
+      href="/#/account"
+    >
+      Go to Account
+    </a>
+  </p>
+  <p>
+    <button>
+      Open alert
+    </button>
+    <button>
+      Open confirm
+    </button>
+    <button>
+      Confirm with validation
+    </button>
+    <button>
+      Show Right Panel
+    </button>
+    <button>
+      Show success toast
+    </button>
+    <button>
+      Show persistent info toast
+    </button>
+    <button>
+      Show warning toast
+    </button>
+    <button>
+      Show error toast
+    </button>
+  </p>
+</div>
+`;

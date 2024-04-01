@@ -27,9 +27,10 @@
       "containers/*": ["./src/containers/*"],
       "hooks/*": ["./src/hooks/*"],
       "navigation": ["./src/generated/navigation"],
-      "env": ["./src/env"]
+      "env": ["./src/env"],
+      "src/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "test"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

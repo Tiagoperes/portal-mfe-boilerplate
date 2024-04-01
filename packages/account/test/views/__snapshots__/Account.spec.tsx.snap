@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests of Account page > Should match the snapshot 1`] = `
+.c1 {
+  margin: 0;
+  font: 400 0.875rem/1.5 Roboto,sans-serif;
+}
+
+.c0 {
+  margin-bottom: 24px;
+}
+
+.c0 ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.c0 li {
+  display: flex;
+  flex-direction: row;
+}
+
+.c0 li:before {
+  content: '/';
+  font: tag:p;
+  weight: regular;
+  size: 0.875rem;
+  family: system2;
+  line-height: 1.5;
+  margin: 0 10px;
+  color: var(--light-700);
+}
+
+.c0 li:first-child:before {
+  content: none;
+}
+
+.c0 a {
+  color: var(--light-700);
+}
+
+.c0 a:hover {
+  text-decoration: underline;
+  color: var(--light-contrastText);
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <ul>
+      <li>
+        <p
+          class="c1"
+        >
+          Account
+        </p>
+      </li>
+    </ul>
+  </nav>
+  <p>
+    Account
+  </p>
+  <a
+    href="/#/account/organization"
+  >
+    Organization
+  </a>
+  <a
+    href="/#/account/environments?search=minha+busca+de+ambiente"
+  >
+    Environments
+  </a>
+  <a
+    href="/#/account/workspaces?search=minha+busca+de+workspace&type=ALL"
+  >
+    Workspaces
+  </a>
+</div>
+`;

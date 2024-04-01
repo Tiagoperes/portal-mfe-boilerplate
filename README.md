@@ -66,7 +66,9 @@ first is a constant (static menu) while the second is a React hook (more complex
 The decision of what to render depends on the current route.
 
 ## Testing
-TODO
+There is one test example for each project. To run the test, type `pnpm test` in the terminal window.
+
+All tests are under the directory `test` in the root of each project.
 
 ## Navigation
 In order for it to work in a modular environment, some changes have been made to the navigation library (Citron Navigator). The relevant changes are

@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests of Studio page > Should match the snapshot 1`] = `
+.c1 {
+  animation: cShZpT 1s linear infinite alternate;
+  width: 100%;
+  height: 21px;
+}
+
+.c0 {
+  margin-bottom: 24px;
+}
+
+.c0 ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.c0 li {
+  display: flex;
+  flex-direction: row;
+}
+
+.c0 li:before {
+  content: '/';
+  font: tag:p;
+  weight: regular;
+  size: 0.875rem;
+  family: system2;
+  line-height: 1.5;
+  margin: 0 10px;
+  color: var(--light-700);
+}
+
+.c0 li:first-child:before {
+  content: none;
+}
+
+.c0 a {
+  color: var(--light-700);
+}
+
+.c0 a:hover {
+  text-decoration: underline;
+  color: var(--light-contrastText);
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+      height="21px"
+    />
+  </nav>
+  <p>
+    Studio 
+    1
+  </p>
+  <a
+    href="/#/studios/1/stacks"
+  >
+    Go to Stacks
+  </a>
+  <a
+    href="/#/studios"
+  >
+    Go back to Studios
+  </a>
+</div>
+`;
